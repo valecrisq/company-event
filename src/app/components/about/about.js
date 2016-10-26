@@ -1,0 +1,35 @@
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+
+import './about.css';
+import template from './about.html';
+
+class AboutCtrl {
+  constructor($log) {
+    // $log.info('AboutCtrl instantiated');
+    this.title = 'About works!';
+  }
+}
+
+AboutCtrl.$inject = ['$log'];
+
+let about = () => {
+  return {
+    template: template,
+    controller: AboutCtrl,
+    controllerAs: 'ctrl'
+  }
+};
+
+const MODULE_NAME = 'about';
+
+angular.module(MODULE_NAME, [uiRouter])
+ .config(($stateProvider) => {
+    $stateProvider.state('about', {
+      url: '/about',
+      template: '<about></about>'
+    });
+  })
+  .directive('about', about);
+
+  export default MODULE_NAME;
