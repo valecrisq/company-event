@@ -16,12 +16,9 @@ export class AppCtrl {
 
 AppCtrl.$inject = ['$log'];
 
-export const appDirective = () => {
-  return {
+export const appDirective = {
     template: template,
     controller: AppCtrl,
-    controllerAs: 'ctrl'
-  }
 };
 
 const MODULE_NAME = 'app';
@@ -30,6 +27,6 @@ angular.module(MODULE_NAME, [
   home,
   about,
 ])
-  .directive('app', appDirective);
+  .component('app', appDirective);
 
 export default MODULE_NAME;

@@ -20,7 +20,7 @@ describe('app', () => {
     });
   });
 
-  describe('App directive', () => {
+  describe('App component', () => {
     let directive;
 
     beforeEach(() => {
@@ -28,7 +28,7 @@ describe('app', () => {
     });
 
     it('should use the right template',()=>{
-        expect(directive().template).toBe(template);
+        expect(directive.template).toBe(template);
     });
   });
 

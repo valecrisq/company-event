@@ -7,18 +7,15 @@ import template from './about.html';
 class AboutCtrl {
   constructor($log) {
     // $log.info('AboutCtrl instantiated');
-    this.title = 'About works!';
+    this.title = 'About Works too!';
   }
 }
 
 AboutCtrl.$inject = ['$log'];
 
-let about = () => {
-  return {
+let about = {
     template: template,
-    controller: AboutCtrl,
-    controllerAs: 'ctrl'
-  }
+    controller: AboutCtrl
 };
 
 const MODULE_NAME = 'about';
@@ -30,6 +27,6 @@ angular.module(MODULE_NAME, [uiRouter])
       template: '<about></about>'
     });
   })
-  .directive('about', about);
+  .component('about', about);
 
   export default MODULE_NAME;

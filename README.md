@@ -7,12 +7,13 @@ This workflow serves as a starting point for building Angular 1.x applications u
 Based on and expanded from [Preboot angular-webpack starter](https://github.com/preboot/angular-webpack)
 
 This starter application is designed to be easy to migrate to Angular 2.
-* Uses a structure and naming conventions that follows the Angular 2 style guide
-* Uses component directives with no standalone controllers
-* Uses ES6/2015 throughout
+* Uses a file structure that follows the [Angular 2 Style Guide](https://angular.io/styleguide).
+* Uses the component() method to define the directive.
+* Uses ES6/2015 throughout with controller directives implemented as a class.
+* No standalone controllers or use of $scope.
 
 Other features:
-* Bare-bones app with Home and About page
+* Bare-bones app with Home and About page.
 * Heavily commented webpack configuration with reasonable defaults and Babel transpilation.
 * Source maps included in all builds.
 * Webpack development server with live reload.

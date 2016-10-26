@@ -13,14 +13,10 @@ class HomeCtrl {
 
 HomeCtrl.$inject = ['$log'];
 
-let home = () => {
-  return {
+let home = {
     template: template,
-    controller: HomeCtrl,
-    controllerAs: 'ctrl'
-  }
+    controller: HomeCtrl
 };
-
 
 const MODULE_NAME = 'home';
 
@@ -34,6 +30,6 @@ angular.module(MODULE_NAME, [uiRouter])
       template: '<home></home>'
     });
   })
-  .directive('home', home);
+  .component('home', home);
 
 export default MODULE_NAME;
