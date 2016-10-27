@@ -7,6 +7,11 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
+    "e2e": "protractor",
+    "e2e-live": "protractor --elementExplorer",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start",
+    "postinstall": "npm run webdriver-update",
     "start": "npm run server"
   },
   "repository": {
@@ -36,6 +41,7 @@
     "html-webpack-plugin": "^2.7.1",
     "isparta-loader": "^2.0.0",
     "jasmine-core": "^2.3.4",
+    "jasmine-spec-reporter": "^2.7.0",
     "karma": "^1.1.0",
     "karma-coverage": "^1.0.0",
     "karma-jasmine": "^1.0.2",
@@ -47,6 +53,7 @@
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.4",
     "postcss-loader": "^0.9.1",
+    "protractor": "^4.0.10",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.1",
     "style-loader": "^0.13.0",

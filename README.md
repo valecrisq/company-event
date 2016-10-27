@@ -18,7 +18,7 @@ Other features:
 * Source maps included in all builds.
 * Webpack development server with live reload.
 * Production builds with cache busting.
-* Testing environment using karma to run tests and jasmine as the framework.
+* Testing environment using karma and protractor to run tests and jasmine as the framework.
 * Code coverage when tests are run.
 * No gulp and no grunt, just npm scripts.
 
@@ -90,6 +90,11 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
+
+#### 1. End-to-End Tests
+
+* start server: `npm start`
+* run tests in a separate window: `npm run e2e`
 
 # License
 
