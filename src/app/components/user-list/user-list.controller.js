@@ -3,8 +3,10 @@ export class UserListCtrl {
         this.UserService = UserService;
     }
 
-    async $onInit() {
-        this.user = await this.UserService.getUsers(); // .then(result => result.data);
+    $onInit() {
+        this.UserService.getUsers().then(result => {
+            this.users = result.data;
+        });
     }
 
     selectUser(user) {
