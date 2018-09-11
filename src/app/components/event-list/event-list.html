@@ -1,0 +1,19 @@
+<div>
+    <button ng-click="$ctrl.showEvents = !$ctrl.showEvents">Show/Hide Events</button>
+    <ul ng-show="$ctrl.showEvents">
+        <li ng-repeat="event in $ctrl.events">
+            Event Name: {{event.description}}
+            </br>
+            Total Spaces: {{event.num_spaces}}
+            </br>
+            Left Spaces: {{$ctrl.getSpacesLeft(event)}}
+            </br>
+            Date Time: {{event.date_time}}
+            </br>
+            Duration: {{event.duration}}
+            </br>
+            Price: {{event.price / 1000 | currency: '€'}}
+        </li>
+    </ul>
+</div>
+

@@ -2,11 +2,10 @@ import angular from 'angular';
 
 import template from './app.html';
 import '../style/app.css';
-
-import {userListComponent} from "./components/user-list/user-list.component";
-import {UserService} from "./services/UserService";
-import {currentUserComponent} from "./components/current-user/current-user.component";
-import {userListItemComponent} from "./components/user-list-item/user-list-item.component";
+import CompanyService from "./services/CompanyService";
+import EventService from "./services/EventService";
+import {companyList} from "./components/company-list/company-list.component";
+import {eventList} from "./components/event-list/event-list.component";
 
 export default angular
     .module('app', [])
@@ -14,10 +13,9 @@ export default angular
         template
     })
 
-    .service('UserService', UserService)
-    .component('userList', userListComponent)
-    .component('userListItem', userListItemComponent)
-    .component('currentUser', currentUserComponent)
-
+    .service('CompanyService', CompanyService)
+    .service('EventService', EventService)
+    .component('companyList', companyList)
+    .component('eventList', eventList)
     .name;
 

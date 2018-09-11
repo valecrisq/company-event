@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li ng-repeat="company in $ctrl.companies">Name: {{company.name}}
+            <span ng-show="company.address"> - Address: {{company.address}}</span>
+            <event-list company="company"></event-list>
+        </li>
+    </ul>
+</div>
